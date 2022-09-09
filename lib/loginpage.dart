@@ -141,8 +141,8 @@ class _LoginPageState extends State<LoginPage> {
                   paste: false,
                 ),
                 decoration: const InputDecoration(
-                  hintText: 'Password',
                   counter: Offstage(),
+                  hintText: 'Password',
                   contentPadding: EdgeInsets.only(left: 15, right: 15),
                   border: InputBorder.none,
                 ),
