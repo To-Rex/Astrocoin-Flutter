@@ -201,9 +201,7 @@ class _ComUserSearchState extends State<ComUserSearch> {
                         title: Row(
                           children: [
                             Text(
-                              useerrlist[index].name +
-                                  ' ' +
-                                  useerrlist[index].last_name,
+                              useerrlist[index].name,
                               style: GoogleFonts.fredoka(
                                 fontSize: 16,
                                 color: Colors.black,
@@ -690,9 +688,7 @@ class _ComUserSearchState extends State<ComUserSearch> {
                         title: Row(
                           children: [
                             Text(
-                              useerrlist[index].name +
-                                  ' ' +
-                                  useerrlist[index].last_name,
+                              useerrlist[index].name,
                               style: GoogleFonts.fredoka(
                                 fontSize: 16,
                                 color: Colors.black,
