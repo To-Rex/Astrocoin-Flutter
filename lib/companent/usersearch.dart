@@ -223,8 +223,8 @@ class _ComUserSearchState extends State<ComUserSearch> {
                           '${useerrlist[index].balance} ACK',
                           style: GoogleFonts.fredoka(
                             fontSize: 16,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
+                            color: Colors.black12,
+                            fontWeight: FontWeight.w300,
                           ),
                         ),
                         onTap: () {
@@ -710,8 +710,8 @@ class _ComUserSearchState extends State<ComUserSearch> {
                           '${useerrlist[index].balance} ACK',
                           style: GoogleFonts.fredoka(
                             fontSize: 16,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
+                            color: Colors.black12,
+                            fontWeight: FontWeight.w300,
                           ),
                         ),
                         onTap: () {
