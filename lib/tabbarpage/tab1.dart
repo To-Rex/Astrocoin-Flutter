@@ -178,6 +178,23 @@ class _Tab1State extends State<Tab1> {
                                                                 0.05,
                                                           ),
                                                         if (transferlist[i]
+                                                            .status ==
+                                                            'returned')
+                                                          SvgPicture.asset(
+                                                            'assets/svgs/uncertainicon.svg',
+                                                            height: MediaQuery.of(
+                                                                context)
+                                                                .size
+                                                                .height *
+                                                                0.05,
+                                                            width: MediaQuery.of(
+                                                                context)
+                                                                .size
+                                                                .width *
+                                                                0.05,
+                                                          ),
+
+                                                        if (transferlist[i]
                                                                     .status ==
                                                                 'failed' &&
                                                             transferlist[i]
@@ -521,6 +538,20 @@ class _Tab1State extends State<Tab1> {
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w500),
+                                                      ),
+                                                    if (transferlist[i]
+                                                        .status ==
+                                                        'returned')
+                                                      Text(
+                                                        transferlist[i].status,
+                                                        style:
+                                                        GoogleFonts.fredoka(
+                                                            color: Colors
+                                                                .green,
+                                                            fontSize: 22,
+                                                            fontWeight:
+                                                            FontWeight
+                                                                .w500),
                                                       ),
                                                     if (transferlist[i]
                                                             .status ==
