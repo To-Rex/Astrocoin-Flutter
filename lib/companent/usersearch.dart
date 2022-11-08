@@ -203,9 +203,9 @@ class _ComUserSearchState extends State<ComUserSearch> {
                             Text(
                               useerrlist[index].name,
                               style: GoogleFonts.fredoka(
-                                fontSize: 16,
+                                fontSize: 17,
                                 color: Colors.black,
-                                fontWeight: FontWeight.w400,
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
                             const SizedBox(
@@ -222,9 +222,9 @@ class _ComUserSearchState extends State<ComUserSearch> {
                         subtitle: Text(
                           '${useerrlist[index].balance} ACK',
                           style: GoogleFonts.fredoka(
-                            fontSize: 16,
-                            color: Colors.black12,
-                            fontWeight: FontWeight.w300,
+                            fontSize: 15,
+                            color: Colors.black54,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
                         onTap: () {
@@ -692,7 +692,7 @@ class _ComUserSearchState extends State<ComUserSearch> {
                               style: GoogleFonts.fredoka(
                                 fontSize: 16,
                                 color: Colors.black,
-                                fontWeight: FontWeight.w400,
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
                             const SizedBox(
@@ -709,9 +709,9 @@ class _ComUserSearchState extends State<ComUserSearch> {
                         subtitle: Text(
                           '${useerrlist[index].balance} ACK',
                           style: GoogleFonts.fredoka(
-                            fontSize: 16,
-                            color: Colors.black12,
-                            fontWeight: FontWeight.w300,
+                            fontSize: 15,
+                            color: Colors.black45,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
                         onTap: () {
