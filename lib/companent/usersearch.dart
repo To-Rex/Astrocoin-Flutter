@@ -220,7 +220,7 @@ class _ComUserSearchState extends State<ComUserSearch> {
                           ],
                         ),
                         subtitle: Text(
-                          useerrlist[index].balance.toString(),
+                          '${useerrlist[index].balance} ACK',
                           style: GoogleFonts.fredoka(
                             fontSize: 16,
                             color: Colors.black,
@@ -707,7 +707,7 @@ class _ComUserSearchState extends State<ComUserSearch> {
                           ],
                         ),
                         subtitle: Text(
-                          useerrlist[index].balance.toString(),
+                          '${useerrlist[index].balance} ACK',
                           style: GoogleFonts.fredoka(
                             fontSize: 16,
                             color: Colors.black,
