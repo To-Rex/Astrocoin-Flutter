@@ -103,9 +103,19 @@ class _SendSheetState extends State<QrSheet> {
                   ),
                   onPressed: () {
                     Clipboard.setData(ClipboardData(text: vallets));
-                    Scaffold.of(context).showSnackBar(const SnackBar(
+                    /*Scaffold.of(context).showSnackBar(const SnackBar(
                         content: Text('Wallet id copied to clipboard')));
-                    customToast('Wallet id copied to clipboard');
+                    customToast('Wallet id copied to clipboard');*/
+                    final snackBar = SnackBar(
+                      content: const Text('Yay! A SnackBar!'),
+                      action: SnackBarAction(
+                        label: 'Undo',
+                        onPressed: () {
+                          // Some code to undo the change.
+                        },
+                      ),
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   },
                 ),
               ],
@@ -119,13 +129,30 @@ class _SendSheetState extends State<QrSheet> {
         SizedBox(
           width: MediaQuery.of(context).size.width - 50,
           height: MediaQuery.of(context).size.height / 15,
-          child: RaisedButton(
+          /*child: RaisedButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
             color: Colors.deepPurpleAccent,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            child: Text(
+              'Close',
+              style: GoogleFonts.fredoka(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.white),
+            ),
+          ),*/
+          child: TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.deepPurpleAccent,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+            ),
             child: Text(
               'Close',
               style: GoogleFonts.fredoka(

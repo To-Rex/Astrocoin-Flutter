@@ -249,12 +249,24 @@ class _SendSheetState extends State<SendSheet> {
         SizedBox(
           width: MediaQuery.of(context).size.width - 50,
           height: MediaQuery.of(context).size.height / 15,
-          child: RaisedButton(
+          /*child: RaisedButton(
             onPressed: () {
               send();
               },
             color: Colors.deepPurpleAccent,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            child: const Text('Send',
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            ),
+          ),*/
+          child: ElevatedButton(
+            onPressed: () {
+              send();
+            },
+            style: ElevatedButton.styleFrom(
+              primary: Colors.deepPurpleAccent,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            ),
             child: const Text('Send',
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
