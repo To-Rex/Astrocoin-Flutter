@@ -640,6 +640,58 @@ class _Tab2State extends State<Tab2> {
                                             ),
                                           ],
                                         ),
+                                      if (transferlist[i].status == 'returned')
+                                        Row(
+                                          children: [
+                                            SizedBox(
+                                                width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                    0.01),
+                                            SvgPicture.asset(
+                                              'assets/svgs/uncertainicon.svg',
+                                              height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                                  0.05,
+                                              width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                                  0.05,
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 10.0),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    transferlist[i].title,
+                                                    style: GoogleFonts.fredoka(
+                                                        color: const Color
+                                                            .fromRGBO(
+                                                            0, 0, 0, 1),
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                        FontWeight.w400),
+                                                  ),
+                                                  Text(
+                                                    //if transferlist[i] > 0 then + else - and transferlist[i] = 0
+                                                    '${transferlist[i].amount} ASC',
+                                                    style: GoogleFonts.fredoka(
+                                                        color: const Color
+                                                            .fromRGBO(
+                                                            0, 0, 0, 1),
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                        FontWeight.w400),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       if (transferlist[i].status == 'failed' &&
                                           transferlist[i].wallet_to != walleti)
                                         Row(
