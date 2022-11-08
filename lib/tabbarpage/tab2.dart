@@ -134,7 +134,7 @@ class _Tab2State extends State<Tab2> {
                                           0.05,
                                     ),
                                     const Divider(
-                                      thickness: 2,
+                                      thickness: 1,
                                       color:
                                       Color.fromRGBO(241, 241, 241, 10),
                                     ),
@@ -177,6 +177,23 @@ class _Tab2State extends State<Tab2> {
                                                             .width *
                                                             0.05,
                                                       ),
+                                                    if (transferlist[i]
+                                                        .status ==
+                                                        'returned')
+                                                      SvgPicture.asset(
+                                                        'assets/svgs/uncertainicon.svg',
+                                                        height: MediaQuery.of(
+                                                            context)
+                                                            .size
+                                                            .height *
+                                                            0.05,
+                                                        width: MediaQuery.of(
+                                                            context)
+                                                            .size
+                                                            .width *
+                                                            0.05,
+                                                      ),
+
                                                     if (transferlist[i]
                                                         .status ==
                                                         'failed' &&
@@ -286,7 +303,8 @@ class _Tab2State extends State<Tab2> {
                                                 ),
                                                 Text(
                                                   'Service',
-                                                  style:  GoogleFonts.fredoka(
+                                                  style:
+                                                  GoogleFonts.fredoka(
                                                       color: const Color
                                                           .fromRGBO(
                                                           0, 0, 0, 100),
@@ -304,8 +322,10 @@ class _Tab2State extends State<Tab2> {
                                                 ),
                                                 Text(
                                                   transferlist[i].type,
-                                                  style: GoogleFonts.fredoka(
-                                                      color: Colors.black,
+                                                  style:
+                                                  GoogleFonts.fredoka(
+                                                      color:
+                                                      Colors.black,
                                                       fontSize: 22,
                                                       fontWeight:
                                                       FontWeight
@@ -521,6 +541,20 @@ class _Tab2State extends State<Tab2> {
                                                   ),
                                                 if (transferlist[i]
                                                     .status ==
+                                                    'returned')
+                                                  Text(
+                                                    transferlist[i].status,
+                                                    style:
+                                                    GoogleFonts.fredoka(
+                                                        color: Colors
+                                                            .green,
+                                                        fontSize: 22,
+                                                        fontWeight:
+                                                        FontWeight
+                                                            .w500),
+                                                  ),
+                                                if (transferlist[i]
+                                                    .status ==
                                                     'failed')
                                                   Text(
                                                     transferlist[i].status,
@@ -589,6 +623,58 @@ class _Tab2State extends State<Tab2> {
                                               0.010),
                                       if (transferlist[i].status == 'failed' &&
                                           transferlist[i].wallet_to == walleti)
+                                        Row(
+                                          children: [
+                                            SizedBox(
+                                                width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                    0.01),
+                                            SvgPicture.asset(
+                                              'assets/svgs/uncertainicon.svg',
+                                              height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                                  0.05,
+                                              width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                                  0.05,
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 10.0),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    transferlist[i].title,
+                                                    style: GoogleFonts.fredoka(
+                                                        color: const Color
+                                                            .fromRGBO(
+                                                            0, 0, 0, 1),
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                        FontWeight.w400),
+                                                  ),
+                                                  Text(
+                                                    //if transferlist[i] > 0 then + else - and transferlist[i] = 0
+                                                    '${transferlist[i].amount} ASC',
+                                                    style: GoogleFonts.fredoka(
+                                                        color: const Color
+                                                            .fromRGBO(
+                                                            0, 0, 0, 1),
+                                                        fontSize: 15,
+                                                        fontWeight:
+                                                        FontWeight.w400),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      if (transferlist[i].status == 'returned' )
                                         Row(
                                           children: [
                                             SizedBox(
