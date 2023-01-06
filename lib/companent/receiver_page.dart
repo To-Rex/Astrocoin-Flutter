@@ -41,7 +41,7 @@ class _TestPageState extends State<ReceiverPage> {
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.75,
                       child: const WebView(
-                        initialUrl: 'https://astrocoin.uz/recover',
+                        initialUrl: 'https://wallet.astrocoin.uz/recover',
                         javascriptMode: JavascriptMode.unrestricted,
                       ),
                     ),

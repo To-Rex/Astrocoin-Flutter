@@ -184,9 +184,13 @@ class _PasswordPageState extends State<PasswordScreenPage> {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
+    // return CupertinoPageScaffold(
+    //   backgroundColor: const Color.fromRGBO(241, 241, 241, 10),
+    //   child:
+    // );
+    return Scaffold(
       backgroundColor: const Color.fromRGBO(241, 241, 241, 10),
-      child: Column(
+      body: Column(
         children: [
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.12,
@@ -200,6 +204,7 @@ class _PasswordPageState extends State<PasswordScreenPage> {
             style: GoogleFonts.fredoka(
                 color: const Color.fromRGBO(0, 0, 0, 10),
                 fontSize: 30, fontWeight: FontWeight.w500),
+
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.004,

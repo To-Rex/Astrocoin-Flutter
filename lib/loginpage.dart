@@ -169,7 +169,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: MediaQuery.of(context)
                             .size
                             .height *
-                            0.8,
+                            0.9,
                         width: MediaQuery.of(context)
                             .size
                             .width,
@@ -225,7 +225,7 @@ class _LoginPageState extends State<LoginPage> {
                             height: MediaQuery.of(context)
                                 .size
                                 .height *
-                                0.8,
+                                0.9,
                             width: MediaQuery.of(context)
                                 .size
                                 .width,
@@ -265,6 +265,34 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   child: TextButton(
                     onPressed: () {
+                      if (_email.text.isEmpty ){
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Please enter your email'),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            ),
+                            duration: Duration(milliseconds: 1700),
+                            backgroundColor: Colors.red,
+                            behavior: SnackBarBehavior.floating,
+                          ),
+                        );
+                        return;
+                      }
+                      if (_password.text.isEmpty ){
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Please enter your password'),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            ),
+                            duration: Duration(milliseconds: 1700),
+                            backgroundColor: Colors.red,
+                            behavior: SnackBarBehavior.floating,
+                          ),
+                        );
+                        return;
+                      }
                       login();
                     },
                     child: Text(
