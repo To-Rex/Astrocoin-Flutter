@@ -3,6 +3,14 @@
 <plist version="1.0">
 
 <dict>
+    <key>CFBundleName</key>
+    <string>AstroCoin</string>
+    <key>CFBundleDisplayName</key>
+    <string>AstroCoin</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.astrocoin.AstroCoin</string>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
